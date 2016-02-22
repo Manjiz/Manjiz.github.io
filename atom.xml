@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://manjiz.com/"/>
-  <updated>2016-02-16T10:04:59.544Z</updated>
+  <updated>2016-02-22T03:29:51.315Z</updated>
   <id>http://manjiz.com/</id>
   
   <author>
@@ -16,22 +16,74 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>zh-CN Test</title>
-    <link href="http://manjiz.com/2016/02/16/zh-CN-Test/"/>
-    <id>http://manjiz.com/2016/02/16/zh-CN-Test/</id>
-    <published>2016-02-16T09:25:26.000Z</published>
-    <updated>2016-02-16T10:04:59.544Z</updated>
+    <title>Sublime Text Emmet 介绍篇</title>
+    <link href="http://manjiz.com/2016/02/22/Sublime-Text-Emmet/"/>
+    <id>http://manjiz.com/2016/02/22/Sublime-Text-Emmet/</id>
+    <published>2016-02-22T02:36:36.000Z</published>
+    <updated>2016-02-22T03:29:51.315Z</updated>
     
-    <content type="html">&lt;p&gt;我在中央财经大学学术会堂一层等了二十分钟老树，他没有接电话。风从两扇木框玻璃门的缝隙里漏出来，大厅里很冷，保安袖着手，好像跟所有人都没有关系。这时，我看到有个人从大厅那头冲过来，戴着一顶黑色毛线帽，手里拎着起码三个纸袋子，步子很大，像是忙着要扎进某个地方去。&lt;/p&gt;
-&lt;p&gt;是老树。在下行电梯里，他絮叨着一堆琐事，申请了个新机房，有机关想把他的画带到国外去……跟着他在地下二层左拐右拐，他打开一扇黄色木门，门后两个大书架堆满了书，从书里钻进去，就开阔了起来。在最里头的角落里是张巨大的然而被书、瓷、烟、茶、纸、墨和烟灰占满的桌子，老树在那里画画、写字。但他还被一团焦躁之气裹着，他烧水，翻动茶叶盒子，几乎都是空的。桌子下全是酒。&lt;/p&gt;
-&lt;p&gt;几分钟后，茶已经泡好，黑色粗陶杯子很称手。老树站在桌前，展开早已裁好的洒金纸，开始画画。先是一个圆润的M，下方绕上一道弧，再一道短弧——那个没有面目的、总是穿长衫的男人。他渐渐有了形状：坐在一张桌子旁；渐渐有了环境：背后一片水流。一棵柳树歪在水边，枝条垂下来。22分钟后，这张四平尺的水墨画完。刚进门时裹在他身上的焦躁现在都没有了，消散在在一个个示意新芽的墨点里。&lt;/p&gt;
-&lt;p&gt;一个男人，在地下二层，想象着他的山水。&lt;/p&gt;
+    <content type="html">&lt;p&gt;参考：&lt;a href=&quot;http://www.iteye.com/news/27580&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.iteye.com/news/27580&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;概要&quot;&gt;&lt;a href=&quot;#概要&quot; class=&quot;headerlink&quot; title=&quot;概要&quot;&gt;&lt;/a&gt;概要&lt;/h2&gt;&lt;p&gt;Emmet 的前身是大名鼎鼎的 Zen coding，实乃前端利器，鬼魅般引人入胜&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.emmet.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emmet 官网&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://docs.emmet.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emmet 文档&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;HTML&quot;&gt;&lt;a href=&quot;#HTML&quot; class=&quot;headerlink&quot; title=&quot;HTML&quot;&gt;&lt;/a&gt;HTML&lt;/h2&gt;&lt;p&gt;&lt;strong&gt; 初始化 &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;输入以下字符，然后按 &lt;code&gt;TAB&lt;/code&gt; 即可快速初始化一个文档&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;html:5&lt;/code&gt; 或者 &lt;code&gt;!&lt;/code&gt;，HTML5 文档&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;html:xt&lt;/code&gt;，XHTML 过渡文档&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;html:4s&lt;/code&gt;，HTML4 严格文档&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt; 快速定义 &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Emmet 采用类似 CSS 的语法，输入一串字符按 &lt;code&gt;TAB&lt;/code&gt; 即可快速定义&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;p.bar#enen[count=3]&amp;#123;foo&amp;#125;&amp;#10;---&amp;#10;&amp;#60;p class=&amp;#34;bar&amp;#34; id=&amp;#34;enen&amp;#34; count=&amp;#34;3&amp;#34;&amp;#62;foo&amp;#60;/p&amp;#62;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt; 嵌套 &lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&gt; 子元素&lt;/li&gt;
+&lt;li&gt;+ 同级&lt;/li&gt;
+&lt;li&gt;^ 之前的标签提升一行（即另起）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;p&amp;#62;span+p^p&amp;#10;---&amp;#10;&amp;#60;p&amp;#62;&amp;#10;&amp;#9;&amp;#60;span&amp;#62;&amp;#60;/span&amp;#62;&amp;#10;&amp;#9;&amp;#60;p&amp;#62;&amp;#60;/p&amp;#62;&amp;#10;&amp;#60;/p&amp;#62;&amp;#10;&amp;#60;p&amp;#62;&amp;#60;/p&amp;#62;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt; 用括号分组 &lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;div(.a&amp;#62;span^span)&amp;#10;---&amp;#10;&amp;#60;div&amp;#62;&amp;#10;&amp;#9;&amp;#60;div class=&amp;#34;a&amp;#34;&amp;#62;&amp;#60;span&amp;#62;&amp;#60;/span&amp;#62;&amp;#60;/div&amp;#62;&amp;#10;&amp;#9;&amp;#60;span&amp;#62;&amp;#60;/span&amp;#62;&amp;#10;&amp;#60;/div&amp;#62;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt; 隐式标签 &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如上例中的 &lt;code&gt;.a&lt;/code&gt; 默认生成一个 div，Emmet 根据父标签来判断要生成的隐式标签，所有隐式标签：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;div, li, tr, td, option&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; 多个元素 &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;当然也不需要一些重复的工作&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ul&amp;#62;li.item$*3&amp;#10;---&amp;#10;&amp;#60;ul&amp;#62;&amp;#10;&amp;#9;&amp;#60;li class=&amp;#34;item1&amp;#34;&amp;#62;&amp;#60;/li&amp;#62;&amp;#10;&amp;#9;&amp;#60;li class=&amp;#34;item2&amp;#34;&amp;#62;&amp;#60;/li&amp;#62;&amp;#10;&amp;#9;&amp;#60;li class=&amp;#34;item3&amp;#34;&amp;#62;&amp;#60;/li&amp;#62;&amp;#10;&amp;#60;/ul&amp;#62;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;其中 &lt;code&gt;$&lt;/code&gt; 是索引号，&lt;code&gt;*3&lt;/code&gt; 完成重复创建&lt;/p&gt;
+&lt;h2 id=&quot;CSS&quot;&gt;&lt;a href=&quot;#CSS&quot; class=&quot;headerlink&quot; title=&quot;CSS&quot;&gt;&lt;/a&gt;CSS&lt;/h2&gt;&lt;p&gt;&lt;strong&gt; 值 &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;比如 &lt;code&gt;w100&lt;/code&gt; 即可定义宽度，还可指定单位，如 &lt;code&gt;w100p+m5e&lt;/code&gt;，单位有：&lt;code&gt;p(px)&lt;/code&gt;, &lt;code&gt;e(em)&lt;/code&gt;, &lt;code&gt;x(ex)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; 附加属性 &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;一些额外的选项属性，可以通过 &lt;code&gt;+&lt;/code&gt; 来生成&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;@f &amp;#65306;&amp;#10;@font-face &amp;#123;&amp;#10;    font-family:;&amp;#10;    src:url();&amp;#10;&amp;#125;&amp;#10;&amp;#10;@f+&amp;#65306;&amp;#10;@font-face &amp;#123;&amp;#10;    font-family: &amp;#39;FontName&amp;#39;;&amp;#10;    src: url(&amp;#39;FileName.eot&amp;#39;);&amp;#10;    src: url(&amp;#39;FileName.eot?#iefix&amp;#39;) format(&amp;#39;embedded-opentype&amp;#39;),&amp;#10;         url(&amp;#39;FileName.woff&amp;#39;) format(&amp;#39;woff&amp;#39;),&amp;#10;         url(&amp;#39;FileName.ttf&amp;#39;) format(&amp;#39;truetype&amp;#39;),&amp;#10;         url(&amp;#39;FileName.svg#FontName&amp;#39;) format(&amp;#39;svg&amp;#39;);&amp;#10;    font-style: normal;&amp;#10;    font-weight: normal;&amp;#10;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;其他比如 background, border, font, text-outline, text-shadow 等&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; 模糊匹配 &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;太多缩写有时会记不住，Emmet 会找到与输入最接近的语法，比如：ov:h, ov-h, ovh, oh 生成的代码是相同的，非常人性化的一个功能&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; 供应商前缀 &lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;trf&amp;#10;---&amp;#10;-webkit-transform: ;&amp;#10;-ms-transform: ;&amp;#10;-o-transform: ;&amp;#10;transform: ;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;而且，任意属性都可以，比如：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-super&amp;#10;---&amp;#10;-webkit-super: ;&amp;#10;-moz-super: ;&amp;#10;-ms-super: ;&amp;#10;-o-super: ;&amp;#10;super: ;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;还可指定需要的几个前缀：&lt;code&gt;-wmso-trs&lt;/code&gt;，wmso 分别代表几个供应商前缀&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; 渐变 &lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;lg(left, #fff 50%, #000)&amp;#10;---&amp;#10;background-image: -webkit-linear-gradient(left, #fff 50%, #000);&amp;#10;background-image: -o-linear-gradient(left, #fff 50%, #000);&amp;#10;background-image: linear-gradient(to right, #fff 50%, #000);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;附加功能&quot;&gt;&lt;a href=&quot;#附加功能&quot; class=&quot;headerlink&quot; title=&quot;附加功能&quot;&gt;&lt;/a&gt;附加功能&lt;/h2&gt;&lt;p&gt;&lt;strong&gt; 生成 Lorem ipsum 文本 &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Lorem ipsum 指一篇常用于排版设计领域的拉丁文文章，主要目的是测试文章或文字在不同字型、版型下看起来的效果。通过 Emmet，你只需输入 &lt;code&gt;lorem&lt;/code&gt; 或 &lt;code&gt;lipsum&lt;/code&gt; 即可生成这些文字。还可以指定文字的个数，比如 &lt;code&gt;lorem10&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;定制&quot;&gt;&lt;a href=&quot;#定制&quot; class=&quot;headerlink&quot; title=&quot;定制&quot;&gt;&lt;/a&gt;定制&lt;/h2&gt;&lt;p&gt;定制 Emmet 插件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;添加新缩写或更新现有，&lt;a href=&quot;http://docs.emmet.io/customization/snippets/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;snippets.json&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;更改 Emmet 过滤器和操作行为，&lt;a href=&quot;http://docs.emmet.io/customization/preferences/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;preferences.json&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;定义如何生成HTML或XML代码，&lt;a href=&quot;http://docs.emmet.io/customization/syntax-profiles/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;syntaxProfiles.json&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;支持的编辑器清单&quot;&gt;&lt;a href=&quot;#支持的编辑器清单&quot; class=&quot;headerlink&quot; title=&quot;支持的编辑器清单&quot;&gt;&lt;/a&gt;支持的编辑器清单&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.emmet.io/download/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.emmet.io/download/&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;我在中央财经大学学术会堂一层等了二十分钟老树，他没有接电话。风从两扇木框玻璃门的缝隙里漏出来，大厅里很冷，保安袖着手，好像跟所有人都没有关系。这时，我看到有个人从大厅那头冲过来，戴着一顶黑色毛线帽，手里拎着起码三个纸袋子，步子很大，像是忙着要扎进某个地方去。&lt;/p&gt;
-&lt;p&gt;
+      &lt;p&gt;参考：&lt;a href=&quot;http://www.iteye.com/news/27580&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.iteye.com/news/27580&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;概要&quot;&gt;&lt;a href=&quot;
     
     </summary>
     

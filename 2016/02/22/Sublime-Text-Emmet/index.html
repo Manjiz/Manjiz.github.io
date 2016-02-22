@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Sublime Text Emmet 介绍篇 · 小镇</title><meta name="description" content="Sublime Text Emmet 介绍篇 - 小振 Manji.z"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" type="text/css"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?9b5f86e19a840523f2f2cfd948eec639";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();</script></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="http://weibo.com/u/2289478794" target="_blank" class="nav-list-link">WEIBO</a></li><li class="nav-list-item"><a href="https://github.com/Manjiz" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">Sublime Text Emmet 介绍篇</h1><div class="post-time">Feb 22, 2016</div><div class="post-content"><p>参考：<a href="http://www.iteye.com/news/27580" target="_blank" rel="external">http://www.iteye.com/news/27580</a></p>
+<h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><p>Emmet 的前身是大名鼎鼎的 Zen coding，实乃前端利器，鬼魅般引人入胜</p>
+<ul>
+<li><a href="http://www.emmet.io/" target="_blank" rel="external">Emmet 官网</a></li>
+<li><a href="http://docs.emmet.io/" target="_blank" rel="external">Emmet 文档</a></li>
+</ul>
+<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><p><strong> 初始化 </strong></p>
+<p>输入以下字符，然后按 <code>TAB</code> 即可快速初始化一个文档</p>
+<ul>
+<li><code>html:5</code> 或者 <code>!</code>，HTML5 文档</li>
+<li><code>html:xt</code>，XHTML 过渡文档</li>
+<li><code>html:4s</code>，HTML4 严格文档</li>
+</ul>
+<p><strong> 快速定义 </strong></p>
+<p>Emmet 采用类似 CSS 的语法，输入一串字符按 <code>TAB</code> 即可快速定义</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p.bar#enen[count=3]&#123;foo&#125;&#10;---&#10;&#60;p class=&#34;bar&#34; id=&#34;enen&#34; count=&#34;3&#34;&#62;foo&#60;/p&#62;</span><br></pre></td></tr></table></figure>
+<p><strong> 嵌套 </strong></p>
+<ul>
+<li>> 子元素</li>
+<li>+ 同级</li>
+<li>^ 之前的标签提升一行（即另起）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#62;span+p^p&#10;---&#10;&#60;p&#62;&#10;&#9;&#60;span&#62;&#60;/span&#62;&#10;&#9;&#60;p&#62;&#60;/p&#62;&#10;&#60;/p&#62;&#10;&#60;p&#62;&#60;/p&#62;</span><br></pre></td></tr></table></figure>
+<p><strong> 用括号分组 </strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div(.a&#62;span^span)&#10;---&#10;&#60;div&#62;&#10;&#9;&#60;div class=&#34;a&#34;&#62;&#60;span&#62;&#60;/span&#62;&#60;/div&#62;&#10;&#9;&#60;span&#62;&#60;/span&#62;&#10;&#60;/div&#62;</span><br></pre></td></tr></table></figure>
+<p><strong> 隐式标签 </strong></p>
+<p>如上例中的 <code>.a</code> 默认生成一个 div，Emmet 根据父标签来判断要生成的隐式标签，所有隐式标签：</p>
+<p><code>div, li, tr, td, option</code></p>
+<p><strong> 多个元素 </strong></p>
+<p>当然也不需要一些重复的工作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ul&#62;li.item$*3&#10;---&#10;&#60;ul&#62;&#10;&#9;&#60;li class=&#34;item1&#34;&#62;&#60;/li&#62;&#10;&#9;&#60;li class=&#34;item2&#34;&#62;&#60;/li&#62;&#10;&#9;&#60;li class=&#34;item3&#34;&#62;&#60;/li&#62;&#10;&#60;/ul&#62;</span><br></pre></td></tr></table></figure>
+<p>其中 <code>$</code> 是索引号，<code>*3</code> 完成重复创建</p>
+<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><p><strong> 值 </strong></p>
+<p>比如 <code>w100</code> 即可定义宽度，还可指定单位，如 <code>w100p+m5e</code>，单位有：<code>p(px)</code>, <code>e(em)</code>, <code>x(ex)</code></p>
+<p><strong> 附加属性 </strong></p>
+<p>一些额外的选项属性，可以通过 <code>+</code> 来生成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@f &#65306;&#10;@font-face &#123;&#10;    font-family:;&#10;    src:url();&#10;&#125;&#10;&#10;@f+&#65306;&#10;@font-face &#123;&#10;    font-family: &#39;FontName&#39;;&#10;    src: url(&#39;FileName.eot&#39;);&#10;    src: url(&#39;FileName.eot?#iefix&#39;) format(&#39;embedded-opentype&#39;),&#10;         url(&#39;FileName.woff&#39;) format(&#39;woff&#39;),&#10;         url(&#39;FileName.ttf&#39;) format(&#39;truetype&#39;),&#10;         url(&#39;FileName.svg#FontName&#39;) format(&#39;svg&#39;);&#10;    font-style: normal;&#10;    font-weight: normal;&#10;&#125;</span><br></pre></td></tr></table></figure>
+<p>其他比如 background, border, font, text-outline, text-shadow 等</p>
+<p><strong> 模糊匹配 </strong></p>
+<p>太多缩写有时会记不住，Emmet 会找到与输入最接近的语法，比如：ov:h, ov-h, ovh, oh 生成的代码是相同的，非常人性化的一个功能</p>
+<p><strong> 供应商前缀 </strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">trf&#10;---&#10;-webkit-transform: ;&#10;-ms-transform: ;&#10;-o-transform: ;&#10;transform: ;</span><br></pre></td></tr></table></figure>
+<p>而且，任意属性都可以，比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-super&#10;---&#10;-webkit-super: ;&#10;-moz-super: ;&#10;-ms-super: ;&#10;-o-super: ;&#10;super: ;</span><br></pre></td></tr></table></figure>
+<p>还可指定需要的几个前缀：<code>-wmso-trs</code>，wmso 分别代表几个供应商前缀</p>
+<p><strong> 渐变 </strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lg(left, #fff 50%, #000)&#10;---&#10;background-image: -webkit-linear-gradient(left, #fff 50%, #000);&#10;background-image: -o-linear-gradient(left, #fff 50%, #000);&#10;background-image: linear-gradient(to right, #fff 50%, #000);</span><br></pre></td></tr></table></figure>
+<h2 id="附加功能"><a href="#附加功能" class="headerlink" title="附加功能"></a>附加功能</h2><p><strong> 生成 Lorem ipsum 文本 </strong></p>
+<p>Lorem ipsum 指一篇常用于排版设计领域的拉丁文文章，主要目的是测试文章或文字在不同字型、版型下看起来的效果。通过 Emmet，你只需输入 <code>lorem</code> 或 <code>lipsum</code> 即可生成这些文字。还可以指定文字的个数，比如 <code>lorem10</code></p>
+<h2 id="定制"><a href="#定制" class="headerlink" title="定制"></a>定制</h2><p>定制 Emmet 插件：</p>
+<ul>
+<li>添加新缩写或更新现有，<a href="http://docs.emmet.io/customization/snippets/" target="_blank" rel="external">snippets.json</a></li>
+<li>更改 Emmet 过滤器和操作行为，<a href="http://docs.emmet.io/customization/preferences/" target="_blank" rel="external">preferences.json</a></li>
+<li>定义如何生成HTML或XML代码，<a href="http://docs.emmet.io/customization/syntax-profiles/" target="_blank" rel="external">syntaxProfiles.json</a></li>
+</ul>
+<h2 id="支持的编辑器清单"><a href="#支持的编辑器清单" class="headerlink" title="支持的编辑器清单"></a>支持的编辑器清单</h2><p><a href="http://www.emmet.io/download/" target="_blank" rel="external">http://www.emmet.io/download/</a></p>
+</div></article></div></section><footer><div class="paginator"><a href="/2016/02/14/hello-world/" class="next">NEXT</a></div><div data-thread-key="2016/02/22/Sublime-Text-Emmet/" data-title="Sublime Text Emmet 介绍篇" data-url="http://manjiz.com/2016/02/22/Sublime-Text-Emmet/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"manjiz"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script><div class="copyright"><p>© 2016 <a href="http://manjiz.com">小振 Manji.z</a>, unless otherwise noted.</p></div></footer><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-65933410-1",'auto');ga('send','pageview');</script><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?a36e15d9e2adec9a21fcdd9f686b1ed2";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script></body></html>
