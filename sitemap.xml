@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://manjiz.com/2016/03/29/Techniques-for-authentication-in-AngularJS-applications/</loc>
+    
+    <lastmod>2016-03-29T11:50:27.196Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://manjiz.com/2016/02/22/Sublime-Text-Emmet/</loc>
     
     <lastmod>2016-03-29T09:02:08.616Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://manjiz.com/2016/03/03/Develop-Chrome-Extension/</loc>
     
     <lastmod>2016-03-29T09:02:03.025Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://manjiz.com/2016/03/29/Techniques-for-authentication-in-AngularJS-applications/</loc>
-    
-    <lastmod>2016-03-29T08:51:59.100Z</lastmod>
     
   </url>
   
